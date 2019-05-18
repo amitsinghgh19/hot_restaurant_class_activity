@@ -39,3 +39,28 @@ require("./routes/htmlRoutes")(app);
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
 });
+
+var waitingArray = [
+  {
+    customerName: " ",
+    customerEmail: " ",
+    phoneNumber: " ",
+    customerID: " "
+  }
+];
+
+
+// Note how we export the array. This makes it accessible to other files using require.
+module.exports = waitingArray;
+
+var tableArray = [
+  {
+    customerName: " ",
+    customerEmail: " ",
+    customerID: " ",
+    phoneNumber: " "
+  }
+];
+
+// Note how we export the array. This makes it accessible to other files using require.
+module.exports = tableArray;
