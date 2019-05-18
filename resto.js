@@ -16,11 +16,11 @@ var path = require("path");
 var app = express();
 
 // Sets an initial port. We"ll use this later in our listener
-var PORT = process.env.PORT || 8080;
+var PORT = 3000;
 
 // Sets up the Express app to handle data parsing
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // ================================================================================
 // ROUTER
@@ -28,8 +28,18 @@ app.use(bodyParser.json());
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get("/tabels", function(req, res) {
+  res.sendFile(path.join(__dirname, "tabels.html"));
+});
+
+app.get("/reserve", function(req, res) {
+  res.sendFile(path.join(__dirname, "reserve.html"));
+});
+
 
 // =============================================================================
 // LISTENER
@@ -63,4 +73,4 @@ var tableArray = [
 ];
 
 // Note how we export the array. This makes it accessible to other files using require.
-module.exports = tableArray;
+//module.exports = tableArray;
