@@ -1,0 +1,25 @@
+{
+  "name": "hot_restaurant_class_activity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "resto.js",
+  "dependencies": {
+    "express": "^4.17.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitsinghgh19/hot_restaurant_class_activity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitsinghgh19/hot_restaurant_class_activity/issues"
+  },
+  "homepage": "https://github.com/amitsinghgh19/hot_restaurant_class_activity#readme"
+}
